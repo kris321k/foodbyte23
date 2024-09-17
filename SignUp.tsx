@@ -21,7 +21,7 @@ export default function FoodByteSignUp({ navigation }: any) {
     })
     .then(response => {
       Alert.alert('Success', 'Account created successfully');
-      navigation.navigate('Home');  // Navigate to Home screen
+      navigation.navigate('Login');  // Navigate to Home screen
     })
     .catch(error => {
       Alert.alert('Error', 'Signup failed: ' + (error.response ? error.response.data : error.message));

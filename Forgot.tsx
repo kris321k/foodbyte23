@@ -3,10 +3,10 @@ import { View, Text, TextInput, TouchableOpacity, StyleSheet, Alert } from 'reac
 import { LinearGradient } from 'expo-linear-gradient';
 import axios from 'axios';
 
-export default function ForgotPassword({ navigation }: any) {
+export default function Forgot({ navigation }: any) {
   const [email, setEmail] = useState('');
 
-  const handleForgotPassword = () => {
+  const handleForgot = () => {
     axios.post('https://foodbyte.pythonanywhere.com/forgot-password/', {
       email: email,
     })
@@ -31,7 +31,7 @@ export default function ForgotPassword({ navigation }: any) {
           onChangeText={setEmail}
         />
         
-        <TouchableOpacity style={styles.button} onPress={handleForgotPassword}>
+        <TouchableOpacity style={styles.button} onPress={handleForgot}>
           <Text style={styles.buttonText}>Send OTP</Text>
         </TouchableOpacity>
         

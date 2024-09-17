@@ -3,14 +3,15 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import Welcome from './Welcome';
 import SignUp from './SignUp';
-import SignIn from './SignIn';
 import Home from './Home'; // Import Home screen
 import Login from './Login';
+import Forgot from './Forgot';
 
 export type RootStackParamList = {
   Welcome: undefined;
   SignUp: undefined;
-  SignIn: undefined;
+  Login: undefined;
+  Forgot:undefined;
   Home: undefined;  // Add Home to the route params
 };
 

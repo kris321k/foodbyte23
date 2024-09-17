@@ -5,6 +5,7 @@ import Welcome from './Welcome';
 import SignUp from './SignUp';
 import SignIn from './SignIn';
 import Home from './Home'; // Import Home screen
+import Login from './Login';
 
 export type RootStackParamList = {
   Welcome: undefined;
@@ -30,15 +31,23 @@ export default function App() {
           options={{ headerShown: false }}
         />
         <Stack.Screen
-          name="SignIn"
-          component={SignIn}
+          name="Login"
+          component={Login}
           options={{ headerShown: false }}
         />
+
+        <Stack.Screen
+          name="Forgot"
+          component={Forgot}
+          options={{ headerShown: false }}
+        />
+        
         <Stack.Screen
           name="Home"
           component={Home}  // Add Home screen
           options={{ headerShown: false }}
         />
+
       </Stack.Navigator>
     </NavigationContainer>
   );
